@@ -21,10 +21,9 @@
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:gravity="center"
-        android:text="TextView"
         android:textSize="24sp"
         android:textColor="#808080"
-        tools:text="Inicio de sesion con Google" />
+        android:text="Inicio de sesion con Google" />
 
     <Button
         android:id="@+id/btn_login"
