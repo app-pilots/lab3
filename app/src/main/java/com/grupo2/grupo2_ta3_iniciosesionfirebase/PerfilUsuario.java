@@ -8,15 +8,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.HashMap;
+
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.squareup.picasso.Picasso;
+
 import android.content.Context;
 import android.content.ContextWrapper;
-
 
 
 public class PerfilUsuario extends AppCompatActivity {
@@ -30,7 +31,7 @@ public class PerfilUsuario extends AppCompatActivity {
         setContentView(R.layout.activity_perfil_usuario);
 
         Intent intent = getIntent();
-        HashMap<String, String> info_user = (HashMap<String, String>)intent.getSerializableExtra("info_user");
+        HashMap<String, String> info_user = (HashMap<String, String>) intent.getSerializableExtra("info_user");
 
         txt_id = findViewById(R.id.txt_userId);
         txt_name = findViewById(R.id.txt_nombre);
@@ -44,18 +45,13 @@ public class PerfilUsuario extends AppCompatActivity {
         Picasso.with(getApplicationContext()).load(photo).into(imv_photo);
     }
 
-    public void cerrarSesion(View view){
+    public void cerrarSesion(View view) {
         FirebaseAuth.getInstance().signOut();
         finish();
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("msg", "cerrarSesion");
         startActivity(intent);
     }
-
-
-
-
-
 
 
 }

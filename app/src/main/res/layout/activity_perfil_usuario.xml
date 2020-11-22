@@ -5,12 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
     tools:context=".PerfilUsuario">
 
     <ImageView
         android:id="@+id/imv_photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -26,6 +29,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Nombre de usuario"
+        android:textColor="@color/black"
         android:textSize="30sp" />
 
     <TextView
@@ -34,12 +38,15 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="correo"
+        android:textColor="@color/black"
         android:textSize="18sp" />
 
     <Button
         android:id="@+id/btn_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:onClick="cerrarSesion"
         android:text="Cerrar Sesion" />
 </LinearLayout>
