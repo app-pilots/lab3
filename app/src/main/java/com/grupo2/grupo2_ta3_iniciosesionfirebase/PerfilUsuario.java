@@ -41,7 +41,7 @@ public class PerfilUsuario extends AppCompatActivity {
         txt_name.setText(info_user.get("user_name"));
         txt_email.setText(info_user.get("user_email"));
         String photo = info_user.get("user_photo");
-        Picasso.get(getApplicationContext()).load(photo).into(imv_photo);
+        Picasso.with(getApplicationContext()).load(photo).into(imv_photo);
     }
 
     public void cerrarSesion(View view){
