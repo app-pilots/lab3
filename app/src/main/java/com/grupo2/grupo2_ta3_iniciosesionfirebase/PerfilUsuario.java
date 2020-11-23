@@ -47,17 +47,14 @@ public class PerfilUsuario extends AppCompatActivity {
         txt_email = findViewById(R.id.txt_correo);
         imv_photo = findViewById(R.id.imv_photo);
         txt_phone = (TextView) findViewById(R.id.txt_phone);
-
         txt_id.setText(info_user.get("user_id"));
         txt_name.setText(info_user.get("user_name"));
         txt_email.setText(info_user.get("user_email"));
         txt_phone.setText(info_user.get("user_phone"));
-
+        //info_user.get("user_")
         if (info_user.get("user_phone").equals("")) {
             txt_phone.setVisibility(View.GONE);
         }
-
-
         String photo = info_user.get("user_photo");
         Picasso.with(getApplicationContext()).load(photo).into(imv_photo);
 
@@ -75,11 +72,9 @@ public class PerfilUsuario extends AppCompatActivity {
         intent.putExtra("msg", "cerrarSesion");
         startActivity(intent);
     }
-
     public void iniciarBaseDeDatos(){
         db_reference=FirebaseDatabase.getInstance().getReference().child("Grupo");
     }
-
     public void leerTweets(){
         db_reference.child("Grupo 2").child("tweets")
                 .addValueEventListener(new ValueEventListener() {
@@ -95,7 +90,6 @@ public class PerfilUsuario extends AppCompatActivity {
                     }
                 });
             }
-
     public void escribirTweets(String autor){
         String tweet="hola mundo firebase 2";
         String fecha="11/23/2020";
