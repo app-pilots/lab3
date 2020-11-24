@@ -114,7 +114,14 @@ public class MainActivity extends AppCompatActivity {
             info_user.put("user_email", user.getEmail());
             info_user.put("user_photo", String.valueOf(user.getPhotoUrl()));
             info_user.put("user_id", user.getUid());
-            info_user.put("user_phone", (user.getPhoneNumber() == null) ? "" : user.getPhoneNumber());
+
+            if(user.getPhoneNumber()!=null){
+                info_user.put("user_phone",user.getPhoneNumber());
+            }
+            else{
+                info_user.put("user_phone","No tiene numero celular registrado");
+            }
+
 
 
             finish();
